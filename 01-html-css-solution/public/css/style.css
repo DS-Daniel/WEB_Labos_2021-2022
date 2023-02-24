@@ -1,0 +1,243 @@
+/*** Variables ***/
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-400: #9ca3af;
+
+  /* Only referring to the CSS variables below gives us the flexibility
+  to easily implement completely different themes (e.g., dark mode) */
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-grey-400);
+  --background-primary: var(--color-white);
+  --background-contrast: var(--color-grey-100);
+  --divider-primary: var(--color-grey-200);
+}
+
+/*** Base ***/
+
+html,
+body {
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background: var(--background-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+.body-1 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.body-2 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.subtitle-1 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.subtitle-2 {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.overline {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/*** Components ***/
+/* Extracting generic classes allows to reuse some 
+elements  in any location without breaking styles */
+
+.btn {
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  background: var(--background-contrast);
+}
+
+.icon-s {
+  height: 1.5rem;
+  width: auto;
+}
+
+.icon-m {
+  height: 2rem;
+  width: auto;
+}
+
+.icon-l {
+  height: 2.5rem;
+  width: auto;
+}
+
+/*** Layout ***/
+
+.root {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'main queue'
+    'player player';
+}
+
+/*** Main ***/
+
+.main {
+  grid-area: main;
+  padding: 5.375rem;
+  overflow: auto;
+}
+
+.playlist-header {
+  display: flex;
+}
+
+.playlist-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 2rem;
+}
+
+.playlist-cover {
+  flex-shrink: 0;
+  width: 15.625rem;
+  height: 15.625rem;
+  object-fit: cover;
+}
+
+.playlist-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tracks-list {
+  margin-top: 2rem;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.track:hover {
+  background: var(--background-contrast);
+}
+
+/*** Player ***/
+
+.player {
+  grid-area: player;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-top: 1px solid var(--divider-primary);
+}
+
+.player-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-basis: 40%;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  flex-basis: 20%;
+  gap: 2rem;
+}
+
+.player-credits {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 40%;
+  padding-right: 1rem;
+}
+
+.player-track-title {
+  margin-bottom: 0.125rem;
+}
+
+.player-track-info {
+  margin-left: 1rem;
+}
+
+.player-track-img {
+  height: 100%;
+}
+
+.player-credits-text {
+  margin-bottom: 0.125rem;
+}
+
+.player-credits-img {
+  height: 1.875rem;
+}
+
+/*** Queue ***/
+
+.queue {
+  grid-area: queue;
+  width: 20.625rem;
+  background: var(--background-contrast);
+  position: relative;
+  border-left: 1px solid var(--divider-primary);
+  overflow: auto;
+}
+
+.queue-header {
+  padding: 2rem;
+}
+
+.queue-empty-state {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

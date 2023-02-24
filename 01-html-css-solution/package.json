@@ -1,0 +1,31 @@
+{
+  "name": "01-html-css",
+  "version": "1.0.0",
+  "description": "Practice with HTML and CSS",
+  "scripts": {
+    "deploy": "./scripts/deploy.sh ./public",
+    "dev": "live-server ./public --port 8080",
+    "start": "serve ./public -l 8080",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chromium",
+    "test": "cypress:run",
+    "test-with-server": "start-server-and-test start http://localhost:8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-classroom/01-html-css-solution.git"
+  },
+  "author": "Paul Nta <paul.ntawuruhunga@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/web-classroom/01-html-css-solution/issues"
+  },
+  "homepage": "https://github.com/web-classroom/01-html-css-solution#readme",
+  "devDependencies": {
+    "cypress": "^8.4.1",
+    "cypress-layout-inspector": "git://github.com/paulnta/cypress-layout-inspector.git#next",
+    "live-server": "^1.2.1",
+    "netlify-cli": "^2.63.3",
+    "serve": "^12.0.1"
+  }
+}

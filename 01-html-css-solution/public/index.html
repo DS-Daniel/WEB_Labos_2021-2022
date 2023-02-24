@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Hits of the moment | Music player</title>
+  </head>
+  <body>
+    <div class="root">
+      <main class="main">
+        <section id="playlist-info" class="playlist-header">
+          <img class="playlist-cover" src="/images/2098157264.jpeg" />
+          <div class="playlist-description">
+            <h2 class="body-1">Playlist</h2>
+            <h1 class="playlist-title title">Hits of the moment</h1>
+            <span class="body-1">By Fábio - Deezer Pop Editor</span>
+            <span class="body-1">2016 · 60 songs · 162 minutes</span>
+          </div>
+        </section>
+        <section class="tracks-list">
+          <div class="track">
+            <span class="subtitle-1">Stay</span>
+            <span class="body-1">The Kid Laroi</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">INDUSTRY BABY</span>
+            <span class="body-1">Lil Nas X</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Woman</span>
+            <span class="body-1">Doja Cat</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Bad Habits</span>
+            <span class="body-1">Ed Sheeran</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Way 2 Sexy</span>
+            <span class="body-1">Drake</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Pepas</span>
+            <span class="body-1">Farruko</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Take My Breath</span>
+            <span class="body-1">The Weeknd</span>
+          </div>
+          <div class="track">
+            <span class="subtitle-1">Happier Than Ever</span>
+            <span class="body-1">Billie Eilish</span>
+          </div>
+        </section>
+      </main>
+
+      <aside class="queue" id="queue">
+        <div class="queue-header body-1">Play next · 0 tracks</div>
+        <!-- queue songs list -->
+        <div class="queue-empty-state">
+          <span class="body-1 text-secondary">This queue is empty</span>
+        </div>
+      </aside>
+
+      <footer class="player" id="player">
+        <div class="player-track">
+          <img class="player-track-img" src="/images/242430582.jpeg" alt="Stay" />
+          <div class="player-track-info">
+            <div class="player-track-title subtitle-2">STAY</div>
+            <div class="track-author body-2">The Kid Laroi</div>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="btn">
+            <img class="icon-l" src="/icons/skip_previous.svg" alt="Skip Previous" />
+          </button>
+          <button class="btn">
+            <img class="icon-l" src="/icons/pause.svg" alt="Pause" />
+          </button>
+          <button class="btn">
+            <img class="icon-l" src="/icons/skip_next.svg" alt="Skip Next" />
+          </button>
+        </div>
+
+        <div class="player-credits">
+          <div>
+            <div class="player-credits-text overline">Powered by</div>
+            <img class="player-credits-img" src="/images/deezer-logo.svg" alt="Deezer logo" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

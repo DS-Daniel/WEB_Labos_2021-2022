@@ -1,0 +1,7 @@
+html 
+   body 
+      h2 Voici la liste des dictons :
+      ul
+         each row in rows
+            li 
+               a(href=`/${row.id}`) dicton #{row.id} : #{row.dicton}

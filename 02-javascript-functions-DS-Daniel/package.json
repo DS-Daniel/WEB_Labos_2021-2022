@@ -1,0 +1,28 @@
+{
+  "name": "02-javascript-functions",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha -r esm",
+    "test-random": "mocha -r esm --grep 'random\\(from,'",
+    "test-randomColor": "mocha -r esm --grep 'randomColor\\(\\)'",
+    "test-toRadians": "mocha -r esm --grep 'toRadians\\(degrees\\)'",
+    "test-toDegrees": "mocha -r esm --grep 'toDegrees\\(radians\\)'",
+    "test-adjacent": "mocha -r esm --grep 'adjacent\\(hypothenuse,'",
+    "test-opposite": "mocha -r esm --grep 'opposite\\(hypothenuse,'",
+    "test-position": "mocha -r esm --grep 'position\\(coordinates,'",
+    "test-collision": "mocha -r esm --grep 'collision\\(pX, pY, cX, cY, cR\\)'",
+    "test-name": "mocha -r esm --grep 'name\\(value\\)'",
+    "test-password": "mocha -r esm --grep 'password\\(value\\)'",
+    "test-phone": "mocha -r esm --grep 'phone\\(value\\)'",
+    "test-date": "mocha -r esm --grep 'date\\(value\\)'",
+    "test-iban": "mocha -r esm --grep 'iban\\(value\\)'"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "esm": "^3.2.25",
+    "mocha": "^8.1.3"
+  }
+}

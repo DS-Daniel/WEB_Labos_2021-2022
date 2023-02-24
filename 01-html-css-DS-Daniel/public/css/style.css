@@ -1,0 +1,192 @@
+html,
+body {
+	height: 100%;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+
+/* Fonts
+  ====== */
+
+.text-grey {
+	color: #9ca3af;
+}
+
+.title,
+.subtitle1,
+.subtitle2 {
+	font-weight: bold;
+}
+
+.subtitle1,
+.subtitle2,
+.body1,
+.body2,
+.overline {
+	line-height: 1.5;
+}
+
+.title {
+	font-size: 48px;
+	line-height: 1.25;
+}
+
+.subtitle1,
+.body1 {
+	font-size: 16px;
+}
+
+.subtitle2,
+.body2 {
+	font-size: 14px;
+}
+
+.overline {
+	font-size: 12px;
+}
+
+
+/* Layout
+  ======= */
+
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content {
+	display: flex;
+	height: calc(100% - 80px);
+}
+
+
+/* Playlist
+  ========= */
+
+.playlist {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 86px 86px 0;
+	overflow: auto;
+}
+
+.playlist-info {
+	display: flex;
+	margin-bottom: 48px;
+}
+
+.playlist-info-img {
+	height: 250px;
+	width: 250px;
+	margin-right: 32px;
+}
+
+.playlist-info-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.playlist-info-text .title {
+	margin: 8px 0;
+}
+
+.playlist-songs {
+	list-style: none;
+	margin: 0;
+	padding: 0 16px;
+	height: auto;
+}
+
+.playlist-songs > li {
+	margin-bottom: 36px;
+}
+
+
+/* Music queue
+  ============ */
+
+.queue-container {
+	background-color: #f3f4f6;
+	width: 330px;
+	padding: 32px;
+	position: relative;
+}
+
+.empty-queue {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+/* Player
+  ======= */
+
+.player {
+	background-color: #fff;
+	border: 1px solid #e7e5eb;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+}
+
+.player-info {
+	height: 100%;
+	display: flex;
+	flex: 1;
+	align-items: center;
+}
+
+.player-info-image {
+	height: 100%;
+	margin-right: 16px;
+}
+
+.player-buttons {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.btn-size-40 {
+	height: 40px;
+	width: 40px;
+}
+
+.btn-play {
+	margin: 0 32px;
+}
+
+.player-logo {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.player-logo-container {
+	padding-right: 16px;
+}
+
+.player-logo-img {
+	height: 30px;
+}
